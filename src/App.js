@@ -33,13 +33,10 @@ class Indigente extends React.Component {
   };
 
   toggleShow = () => {
-    this.setState({ show: false });
+    this.setState({ show: !this.state.show });
   };
 
-  toggleShowNot = () => {
-    this.setState({ show: true });
-  };
-
+ 
   render() {
     if (this.state.show) {
       return (
@@ -54,7 +51,7 @@ class Indigente extends React.Component {
       return (
         <div>
           <h1>There are not elements</h1>
-          <button onClick={this.toggleShowNot}>Volver</button>
+          <button onClick={this.toggleShow}>Volver</button>
         </div>
       );
     }
